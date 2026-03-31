@@ -1,12 +1,4 @@
 class HashTable:
-    """
-    Hash Table implementada desde cero usando:
-    - buckets como lista de listas (separate chaining)
-    - pares [key, value] almacenados en cada bucket
-
-    Restricción: NO se usa dict para la lógica interna.
-    """
-
     def __init__(self, capacity=53):
         if capacity <= 0:
             raise ValueError("capacity must be > 0")
@@ -15,12 +7,6 @@ class HashTable:
         self._size = 0
 
     def _hash(self, key):
-        """
-        Función hash propia basada en ASCII:
-        - Convierte la llave a string
-        - Acumula usando un multiplicador primo
-        - Reduce por el tamaño de la tabla
-        """
         s = str(key)
         h = 0
         prime = 31
@@ -74,10 +60,6 @@ class HashTable:
         return self._capacity
 
     def debug_buckets(self):
-        """
-        Devuelve una representación simple para ver colisiones.
-        (Solo para depuración / demos.)
-        """
         out = []
         for i, bucket in enumerate(self._buckets):
             if bucket:
