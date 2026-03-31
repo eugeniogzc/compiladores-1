@@ -1,5 +1,5 @@
 Tarea 1
-GIT Repo:
+GIT Repo: https://github.com/eugeniogzc/compiladores-1
 
 1. Descripción del proyecto
    Este proyecto implementa Stack (LIFO), Queue (FIFO) y Hash Table en Python, con ejemplos de uso y pruebas manuales.
